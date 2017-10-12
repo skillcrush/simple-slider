@@ -1,9 +1,11 @@
 var SimpleSlider = (function ($) {
 
-  var slider = {};
+  var slider = {},
+    $container;
 
   // set slider config defaults
   slider.config = {
+    containerId: 'simpleSlider',
     showArrows: true,
     slideDuration: 5000
   };
@@ -13,22 +15,40 @@ var SimpleSlider = (function ($) {
     if(config && typeof(config) == 'object') {
       $.extend(slider.config, config);
     }
+
+    // TODOS
+    // Get slider element
+    $container = $(slider.config.containerId);
+
+    // get next button element
+    // get prev button element
+    // get dots container element
+
     console.log(slider.config);
   };
 
   // REQUIREMENTS
   // Slide Automatically
-  // Track current slide
+  autoNext = function(){
+
+  };
+
   // Navigate to next slide
+  slider.next = function(){
+
+  };
+
   // Navigate to previous slide
+  slider.prev = function(){
+
+  };
+
   // Navigate to slide by index
+  slider.setSlideByIndex = function(index){
 
-  // TODOS
-  // Get slider element
-  // get next button element
-  // get prev button element
-  // get dots container element
+  };
 
+  // Track current slide
 
   return slider;
 }(jQuery)); //pass in any needed global variables
