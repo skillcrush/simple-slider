@@ -8,7 +8,8 @@ var SimpleSlider = (function ($) {
   slider.config = {
     containerSelector: '#simpleSlider',
     showArrows: true,
-    slideDuration: 5000
+    slideDuration: 5000,
+    auto: true
   };
 
   // initialize slider with config
@@ -29,13 +30,19 @@ var SimpleSlider = (function ($) {
     // get prev button element
     // get dots container element
 
+    // Slide Automatically or Nah...
+    if(slider.config.auto){
+      autoNext();
+    }
+
   };
+
 
   // REQUIREMENTS
   // Slide Automatically
-  autoNext = function(){
-
-  };
+  function autoNext (){
+    setInterval(slider.next, slider.config.slideDuration);
+  }
 
   // Navigate to next slide
   slider.next = function(){
@@ -93,7 +100,8 @@ var SimpleSlider = (function ($) {
 
 // initialize slider with config overrides
 SimpleSlider.init({
-  showArrows: false
+  showArrows: false,
+  slideDuration: 1000
 });
 
 SimpleSlider.next();
