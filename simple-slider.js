@@ -1,11 +1,12 @@
 var SimpleSlider = (function ($) {
 
   var slider = {},
-    $container;
+    $container,
+    $slides;
 
   // set slider config defaults
   slider.config = {
-    containerId: 'simpleSlider',
+    containerSelector: '#simpleSlider',
     showArrows: true,
     slideDuration: 5000
   };
@@ -17,14 +18,17 @@ var SimpleSlider = (function ($) {
     }
 
     // TODOS
-    // Get slider element
-    $container = $(slider.config.containerId);
+    // get slider element
+    $container = $(slider.config.containerSelector);
+    console.log($container);
+    // get slides
+    $slides = $container.find('.slide');
+    console.log($slides);
 
     // get next button element
     // get prev button element
     // get dots container element
 
-    console.log(slider.config);
   };
 
   // REQUIREMENTS
@@ -35,7 +39,24 @@ var SimpleSlider = (function ($) {
 
   // Navigate to next slide
   slider.next = function(){
-
+    var currentIndex;
+    // get all slides
+    // find active slide
+    var $activeSlide = $slides.filter(function(index){
+      if($(this).hasClass('active')){
+        currentIndex = index;
+      }
+      return $(this).hasClass('active');
+    });
+    // remove active class from active slide
+    $activeSlide.removeClass('active');
+    // apply active class to next slide
+    // handle when next slide is first slide
+    if($slides.length === currentIndex+1){
+      $($slides[0]).addClass('active');
+    }else{
+      $($slides[currentIndex+1]).addClass('active');
+    }
   };
 
   // Navigate to previous slide
@@ -57,3 +78,9 @@ var SimpleSlider = (function ($) {
 SimpleSlider.init({
   showArrows: false
 });
+
+SimpleSlider.next();
+SimpleSlider.next();
+SimpleSlider.next();
+SimpleSlider.next();
+SimpleSlider.next();
