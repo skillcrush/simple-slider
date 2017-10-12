@@ -61,7 +61,24 @@ var SimpleSlider = (function ($) {
 
   // Navigate to previous slide
   slider.prev = function(){
-
+    var currentIndex;
+    // get all slides
+    // find active slide
+    var $activeSlide = $slides.filter(function(index){
+      if($(this).hasClass('active')){
+        currentIndex = index;
+      }
+      return $(this).hasClass('active');
+    });
+    // remove active class from active slide
+    $activeSlide.removeClass('active');
+    // apply active class to prev slide
+    // handle when prev slide is last slide
+    if(currentIndex === 0){
+      $($slides[$slides.length-1]).addClass('active');
+    }else{
+      $($slides[currentIndex-1]).addClass('active');
+    }
   };
 
   // Navigate to slide by index
@@ -81,6 +98,7 @@ SimpleSlider.init({
 
 SimpleSlider.next();
 SimpleSlider.next();
-SimpleSlider.next();
-SimpleSlider.next();
-SimpleSlider.next();
+SimpleSlider.prev();
+SimpleSlider.prev();
+SimpleSlider.prev();
+SimpleSlider.prev();
