@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skillcrush Simple Slider</title>
+    <style>
+        #simpleSlider .slide{
+            display:none;
+        }
+        #simpleSlider .slide.active{
+            display:block;
+        }
+    </style>
+</head>
+    <body>
+        <h1>Skillcrush Simple Slider</h1>
+
+        <div id="simpleSlider">
+            <div class="slide active">
+                <p class="quote">"I GOT A JOB!!!! My interviewer was super impressed by the skills I took the initiative to learn on my own. I was able to "talk the talk," so to speak, which was great! I feel confident going into my new role in just 2 weeks!"</p>
+                <p class="credit">MIRANDA COOPER | WEB DEVELOPER</p>
+            </div>
+            <div class="slide">
+                <p class="quote">"I really thought I was stuck between a rock and a hard place after I graduated college with a liberal arts degree and needed more schooling—and scholarships—in order to get a decent job. My life has completely changed! All of my friends and family are so impressed, and it has brought a certain kind of confidence in my abilities not only as a "techie" but as a mom, and person in general that I could switch careers and understand and DO it. You really can't put a price on that."</p>
+                <p class="credit">EMILY COTTER | FREELANCE VISUAL DESIGNER & DEVELOPER</p>
+            </div>
+        </div>
+        <script
+                src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+                crossorigin="anonymous"></script>
+        <script src="simple-slider.js"></script>
+        <script>
+          // initialize slider with config overrides
+          SimpleSlider.init({
+            showArrows: false,
+            slideDuration: 1000
+          });
+        </script>
+    </body>
+</html>
