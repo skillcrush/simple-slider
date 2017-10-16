@@ -1,3 +1,4 @@
+
 const SimpleSlider = (function () {
 
   let slider = {},

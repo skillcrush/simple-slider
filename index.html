@@ -1,40 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Skillcrush Simple Slider</title>
-    <style>
-        #simpleSlider .slide{
-            display:none;
-        }
-        #simpleSlider .slide.active{
-            display:block;
-        }
-    </style>
-</head>
-    <body>
-        <h1>Skillcrush Simple Slider</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div id="simpleSlider">
-            <div class="slide active">
-                <p class="quote">"I GOT A JOB!!!! My interviewer was super impressed by the skills I took the initiative to learn on my own. I was able to "talk the talk," so to speak, which was great! I feel confident going into my new role in just 2 weeks!"</p>
-                <p class="credit">MIRANDA COOPER | WEB DEVELOPER</p>
-            </div>
-            <div class="slide">
-                <p class="quote">"I really thought I was stuck between a rock and a hard place after I graduated college with a liberal arts degree and needed more schooling—and scholarships—in order to get a decent job. My life has completely changed! All of my friends and family are so impressed, and it has brought a certain kind of confidence in my abilities not only as a "techie" but as a mom, and person in general that I could switch careers and understand and DO it. You really can't put a price on that."</p>
-                <p class="credit">EMILY COTTER | FREELANCE VISUAL DESIGNER & DEVELOPER</p>
-            </div>
-        </div>
-        <script
-                src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-                crossorigin="anonymous"></script>
-        <script src="simple-slider.js"></script>
-        <script>
-          // initialize slider with config overrides
-          SimpleSlider.init({
-            showArrows: false,
-            slideDuration: 1000
-          });
-        </script>
-    </body>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <title>Skillcrush Slider</title>
+</head>
+<body>
+    
+<!-- ID being used for mayhaps javascript -->
+    <div class="wrapper" id="wrapper">
+        <!-- Testimonials/ Slides -->
+        <!-- TODO: still need < > arrows -->
+        <p class="">I GOT A JOB!!!! My interviewer was super impressed by the skills I took the initiative to learn on my own. I was able to "talk the talk," so to speak, which was great! I feel confident going into my new role in just 2 weeks!
+        </p>
+        <p class="">My life has completely changed! All of my friends and family are so impressed, and it has brought a certain kind of confidence in my abilities not only as a "techie" but as a mom, and person in general that I could switch careers and understand and DO it. </p>
+        <p class="">This quote is also inspirational!!!! Super inspirational! Because everything is awesome!</p>
+        <!-- Navigation -->
+        <ul class="dots-wrap">
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+        </ul>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-slider.js"></script>
 </html>
