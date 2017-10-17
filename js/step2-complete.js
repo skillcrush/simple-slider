@@ -1,17 +1,13 @@
 // SimpleSlider is an immediately invoked function expression (IIFE)
 // It returns an object with public methods and properties that can be used to configure and control the slider without modifying the source code
-// it obscures private finctions and variables
+// it obscures private functions and variables
 const SimpleSlider = (function ($) {
 
   // initialize "global" variables
   let slider = {};
 
-  // set slider config defaults
-  slider.config = {
-
-  };
-
   // initialize slider with config
+  // this sets everything up
   slider.init = config => {
     // if config provided, merge it with default config
     // get slider element
@@ -27,27 +23,7 @@ const SimpleSlider = (function ($) {
     // Slide Automatically or Nah...
   };
 
-  // Slide Automatically
-  // private function
-  function autoNext() {
-  }
-
-  // Navigate to next slide
-  // public method
-  slider.next = () => {
-
-  };
-
-  // Navigate to previous slide
-  slider.prev = () => {
-
-  };
-
-  // Navigate to slide by index
-  slider.setSlideByIndex = index => {
-
-  };
-
   // return the slider object with public methods
   return slider;
+
 }(jQuery)); //pass in any needed global variables
