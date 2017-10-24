@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @nellarro
- Sign out
- Watch 1,499
-  Star 28,091  Fork 5,790 necolas/normalize.css
- Code  Issues 13  Pull requests 9  Projects 0  Insights
-Branch: master Find file Copy pathnormalize.css/normalize.css
-73b6b0c  on May 2
-@necolas necolas 7.0.0
-23 contributors @necolas @jonathantneal @battaglr @mattbrundage @magnificode @hudochenkov @JohnAlbin @fritx @tjvantoll @tdhooper @slavanga @rellect @patrickhlauke @paulradzkov @MoOx @kazssym @vkrol @jeremenichelli @wilddeer @AustinWi @gouch @kruczekdawid @Calvein
-RawBlameHistory     
-448 lines (354 sloc)  7.54 KB
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -463,15 +445,3 @@ template {
 [hidden] {
   display: none;
 }
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
