@@ -1,0 +1,117 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 100%;
+  background: rgba(255, 99, 71, 0.82);
+  font-family: Georgia, serif;
+  /* lets the fonts look a bit better */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  position: relative;
+  /* moves the wrapper up on y axis */
+  transform: translateY(-50%);
+  top: 50%;
+  margin: 0 auto;
+  width: 75%;
+  overflow: hidden;
+}
+
+.wrapper p {
+  position: absolute;
+  left: 100%;
+  width: 100%;
+  font-size: 2em;
+  color: #ffffff;
+  top: 0;
+  opacity: 0;
+  transition: left 1.8s, opacity 0.5s ease;
+}
+
+.wrapper p.activeText {
+  position: relative;
+  left: 0;
+  opacity: 1;
+}
+
+.wrapper p.slideLeft {
+  left: -100%;
+  opacity: 0.1;
+}
+
+.wrapper p:before {
+  content: "\201C";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+}
+
+.wrapper p:after {
+  content: "\201D";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-left: 0.1em;
+  vertical-align: -0.45em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background: #7f8c8d;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.active {
+  background: #ecf0f1;
+}
+
+/* Arrows */
+
+.arrows {
+  color: rgba(127, 140, 141, 0.62);
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: 50%;
+  margin-top: -31px;
+}
+
+.prev {
+  border-bottom: 6px solid;
+  border-left: 6px solid;
+  transform: rotate(45deg);
+  left: 10px;
+}
+
+.next {
+  border-bottom: 6px solid;
+  border-left: 6px solid;
+  transform: rotate(-135deg);
+  right: 10px;
+}
+
+/* arrows light up when clicked but do not transition 😊  */
+.prev:active, .next:active {
+  color: white;
+}
